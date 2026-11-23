@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Prévia: troque para Allow: / somente na publicação revisada.

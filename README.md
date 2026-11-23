@@ -1,64 +1,49 @@
-# Astro Starter Kit: Blog
+# Comprar TCC Brasil — protótipo completo v1
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+Site estático responsivo, em português, criado após estudo público de MyStudyBay e Comprar TCC e Monografia. Projeto completamente independente do EiPassei; nenhum post foi migrado.
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## Abrir localmente
 
-<!-- dash-content-start -->
+Abra `index.html` no navegador. As ligações internas apontam para arquivos `index.html` das respectivas pastas, permitindo navegar sem servidor. Para testar via HTTP: `python -m http.server 8000` e entre em `http://localhost:8000/`.
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Estrutura
 
-Features:
+- Página inicial com posicionamento comercial e explicação da assessoria ética.
+- 7 serviços, 8 áreas, 27 capitais, 4 guias e páginas institucionais.
+- Diretório de professores sem nomes inventados; CSV com 12 cadastros por área (96 espaços).
+- FAQ, termos, política de privacidade, integridade, candidatura e formulário de orçamento demonstrativo.
+- SEO por página: títulos, descrições, canonicals de domínio final, Open Graph, BreadcrumbList e dados Organization / WebSite / Service / Article quando pertinentes.
+- sitemap.xml pronto para produção. Cada capital: noindex até conteúdo realmente diferenciado.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
+## IMPORTANTE — PRÉ-LANÇAMENTO
 
-<!-- dash-content-end -->
+**TODAS as páginas estão em `noindex,follow` e `robots.txt` está com `Disallow: /`**. Isto é intencional: a razão social, CNPJ, titulares de perfis, contato, infraestrutura de formulário e práticas de privacidade ainda não foram confirmados. **Nunca publique para indexação sem resolver esse checklist.**
 
-## Getting Started
+### Checklist para ficar operacional
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+1. Confirmar propriedade/registro do domínio e configurar HTTPS, www → apex 301 e DNS.
+2. Inserir nome legal, CNPJ, contato e canais reais em institucional, LGPD, termos e dados estruturados.
+3. Validar equipe, qualificações e autorização específica de foto/bio; preencher CSV. Só então publicar `Person` Schema em páginas individuais reais.
+4. Implementar canal de recebimento seguro (Netlify Forms, backend ou CRM sob contrato LGPD), confirmar retenção, anti-spam e destinatário; `assets/site.js` bloqueia envio na demo. Não inclua documentos sensíveis sem infraestrutura apropriada.
+5. Documentar e verificar operacionalmente o compromisso de **produção acadêmica sem IA generativa** com fornecedores/professores.
+6. Verificar contratos, entregáveis e jurídico de assessoria ética. Não vender autoria terceirizada nem prometer aprovação.
+7. Adicionar conteúdo editorial realmente singular por capital: dados locais verificados, atividades regionais e páginas úteis. Elas estão marcadas noindex até revisão; não prometer escritórios locais.
+8. Em deploy de produção, retirar noindex **somente das páginas aprovadas**, trocar robots para Allow, revisar sitemap, verificar Rich Results Test e Search Console, testar envio e CWV mobile.
+9. Configurar e medir Google Search Console, GA4 somente após definição de privacidade e consentimento aplicável; evitar depoimentos/métricas fictícias.
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
-```
+## Desempenho
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+Sem framework JS e fontes externas. Um CSS e um JS minúsculo, HTML pré-renderizado, responsividade e acessibilidade (skip-link, navegação teclado, reduced-motion, labels).
 
-## 🚀 Project Structure
+## Contagem de arquivos
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+70 arquivos na entrega inicial, incluindo este README.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Referências examinadas
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- https://mystudybay.com.br/
+- https://www.comprartccemonografia.com/
+- https://developers.google.com/search/docs/essentials/spam-policies
+- https://developers.google.com/search/docs/appearance/structured-data/organization
+- https://developers.google.com/search/docs/appearance/structured-data/sd-policies
+- https://www.gov.br/anpd/
