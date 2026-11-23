@@ -36,3 +36,19 @@ Revisão em 23/11/2026. **Projeto não publicado no domínio definitivo; página
 5. Executar auditoria estática (scripts/seo_audit.py), testar Rich Results Test e validação Schema.org no domínio real.
 6. Testar Lighthouse móvel, LCP, INP, CLS e acessibilidade. Métricas reais ainda não foram medidas.
 7. Retirar noindex apenas das páginas aprovadas, atualizar sitemap apenas com URLs indexáveis e enviar ao Search Console.
+
+## Auditoria de similaridade editorial (amostral)
+Método de diagnóstico: extrair o texto visível da tag main de cada página, normalizar para minúsculas e calcular interseção/união de sequências únicas de 5 palavras (Jaccard de 5-gramas). Não é uma métrica do algoritmo do Google.
+
+Medição na V3 após revisão do texto repetitivo:
+- Fortaleza × Manaus: 0,457.
+- Acre × Paraná: 0,490.
+- Paraná × São Paulo (estados): 0,503.
+- Curitiba × São Paulo (capitais): 0,581.
+
+**Decisão:** não afirmar que as 54 páginas territoriais estão prontas para SEO. Elas permanecem noindex. O uso de tópicos regionais próprios ajuda, mas é necessário acrescentar evidências reais de atendimento, conteúdo local verificável, contexto de cursos e orientação genuína. O abuso de páginas de entrada é definido por função e conteúdo, não por limiar de similaridade.
+
+## QA de amostra V3
+Foram verificados na amostra a presença de H1 único, canonical autorreferente, noindex, JSON-LD parseável e tipos de marcação adequados nas páginas de home, formulário, unidades, capitais, estados e professores. Nas 12 URLs examinadas durante a rodada não foram encontrados erros nesses critérios. Isso não substitui auditoria integral nem testes de navegador.
+
+**Não realizado:** Lighthouse mobile real, Rich Results Test online, teste real de envio por WhatsApp em navegador, verificação do endereço no Google Business Profile, validação de titularidade do domínio e contagem de avaliações reais.
