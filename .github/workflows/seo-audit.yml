@@ -1,0 +1,15 @@
+name: SEO static integrity
+on:
+  push:
+    branches: [comprartccbrasil-v2-seo]
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Audit titles, canonicals, JSON-LD and links
+        run: python3 scripts/seo_audit.py
