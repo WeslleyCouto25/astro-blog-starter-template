@@ -1,97 +1,97 @@
-area,id,nome,titulacao,credencial_verificada,autorizacao_publicacao,foto_url,biografia,status
-direito,direito-01,,,,,,,aguardando_validacao
-direito,direito-02,,,,,,,aguardando_validacao
-direito,direito-03,,,,,,,aguardando_validacao
-direito,direito-04,,,,,,,aguardando_validacao
-direito,direito-05,,,,,,,aguardando_validacao
-direito,direito-06,,,,,,,aguardando_validacao
-direito,direito-07,,,,,,,aguardando_validacao
-direito,direito-08,,,,,,,aguardando_validacao
-direito,direito-09,,,,,,,aguardando_validacao
-direito,direito-10,,,,,,,aguardando_validacao
-direito,direito-11,,,,,,,aguardando_validacao
-direito,direito-12,,,,,,,aguardando_validacao
-pedagogia,pedagogia-01,,,,,,,aguardando_validacao
-pedagogia,pedagogia-02,,,,,,,aguardando_validacao
-pedagogia,pedagogia-03,,,,,,,aguardando_validacao
-pedagogia,pedagogia-04,,,,,,,aguardando_validacao
-pedagogia,pedagogia-05,,,,,,,aguardando_validacao
-pedagogia,pedagogia-06,,,,,,,aguardando_validacao
-pedagogia,pedagogia-07,,,,,,,aguardando_validacao
-pedagogia,pedagogia-08,,,,,,,aguardando_validacao
-pedagogia,pedagogia-09,,,,,,,aguardando_validacao
-pedagogia,pedagogia-10,,,,,,,aguardando_validacao
-pedagogia,pedagogia-11,,,,,,,aguardando_validacao
-pedagogia,pedagogia-12,,,,,,,aguardando_validacao
-enfermagem,enfermagem-01,,,,,,,aguardando_validacao
-enfermagem,enfermagem-02,,,,,,,aguardando_validacao
-enfermagem,enfermagem-03,,,,,,,aguardando_validacao
-enfermagem,enfermagem-04,,,,,,,aguardando_validacao
-enfermagem,enfermagem-05,,,,,,,aguardando_validacao
-enfermagem,enfermagem-06,,,,,,,aguardando_validacao
-enfermagem,enfermagem-07,,,,,,,aguardando_validacao
-enfermagem,enfermagem-08,,,,,,,aguardando_validacao
-enfermagem,enfermagem-09,,,,,,,aguardando_validacao
-enfermagem,enfermagem-10,,,,,,,aguardando_validacao
-enfermagem,enfermagem-11,,,,,,,aguardando_validacao
-enfermagem,enfermagem-12,,,,,,,aguardando_validacao
-psicologia,psicologia-01,,,,,,,aguardando_validacao
-psicologia,psicologia-02,,,,,,,aguardando_validacao
-psicologia,psicologia-03,,,,,,,aguardando_validacao
-psicologia,psicologia-04,,,,,,,aguardando_validacao
-psicologia,psicologia-05,,,,,,,aguardando_validacao
-psicologia,psicologia-06,,,,,,,aguardando_validacao
-psicologia,psicologia-07,,,,,,,aguardando_validacao
-psicologia,psicologia-08,,,,,,,aguardando_validacao
-psicologia,psicologia-09,,,,,,,aguardando_validacao
-psicologia,psicologia-10,,,,,,,aguardando_validacao
-psicologia,psicologia-11,,,,,,,aguardando_validacao
-psicologia,psicologia-12,,,,,,,aguardando_validacao
-administracao,administracao-01,,,,,,,aguardando_validacao
-administracao,administracao-02,,,,,,,aguardando_validacao
-administracao,administracao-03,,,,,,,aguardando_validacao
-administracao,administracao-04,,,,,,,aguardando_validacao
-administracao,administracao-05,,,,,,,aguardando_validacao
-administracao,administracao-06,,,,,,,aguardando_validacao
-administracao,administracao-07,,,,,,,aguardando_validacao
-administracao,administracao-08,,,,,,,aguardando_validacao
-administracao,administracao-09,,,,,,,aguardando_validacao
-administracao,administracao-10,,,,,,,aguardando_validacao
-administracao,administracao-11,,,,,,,aguardando_validacao
-administracao,administracao-12,,,,,,,aguardando_validacao
-engenharia,engenharia-01,,,,,,,aguardando_validacao
-engenharia,engenharia-02,,,,,,,aguardando_validacao
-engenharia,engenharia-03,,,,,,,aguardando_validacao
-engenharia,engenharia-04,,,,,,,aguardando_validacao
-engenharia,engenharia-05,,,,,,,aguardando_validacao
-engenharia,engenharia-06,,,,,,,aguardando_validacao
-engenharia,engenharia-07,,,,,,,aguardando_validacao
-engenharia,engenharia-08,,,,,,,aguardando_validacao
-engenharia,engenharia-09,,,,,,,aguardando_validacao
-engenharia,engenharia-10,,,,,,,aguardando_validacao
-engenharia,engenharia-11,,,,,,,aguardando_validacao
-engenharia,engenharia-12,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-01,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-02,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-03,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-04,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-05,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-06,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-07,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-08,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-09,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-10,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-11,,,,,,,aguardando_validacao
-tecnologia-da-informacao,tecnologia-da-informacao-12,,,,,,,aguardando_validacao
-servico-social,servico-social-01,,,,,,,aguardando_validacao
-servico-social,servico-social-02,,,,,,,aguardando_validacao
-servico-social,servico-social-03,,,,,,,aguardando_validacao
-servico-social,servico-social-04,,,,,,,aguardando_validacao
-servico-social,servico-social-05,,,,,,,aguardando_validacao
-servico-social,servico-social-06,,,,,,,aguardando_validacao
-servico-social,servico-social-07,,,,,,,aguardando_validacao
-servico-social,servico-social-08,,,,,,,aguardando_validacao
-servico-social,servico-social-09,,,,,,,aguardando_validacao
-servico-social,servico-social-10,,,,,,,aguardando_validacao
-servico-social,servico-social-11,,,,,,,aguardando_validacao
-servico-social,servico-social-12,,,,,,,aguardando_validacao
+area,id,linha_especialidade,nome,titulacao,credencial_verificada,autorizacao_publicacao,foto_url,biografia,status
+administracao,administracao-01,"Estratégia e planejamento",,,,,,,aguardando_validacao
+administracao,administracao-02,"Gestão de pessoas",,,,,,,aguardando_validacao
+administracao,administracao-03,"Marketing e comportamento do consumidor",,,,,,,aguardando_validacao
+administracao,administracao-04,"Finanças corporativas",,,,,,,aguardando_validacao
+administracao,administracao-05,"Gestão de operações",,,,,,,aguardando_validacao
+administracao,administracao-06,"Empreendedorismo",,,,,,,aguardando_validacao
+administracao,administracao-07,"Logística e cadeias de suprimento",,,,,,,aguardando_validacao
+administracao,administracao-08,"Gestão pública",,,,,,,aguardando_validacao
+administracao,administracao-09,"Pesquisa de mercado",,,,,,,aguardando_validacao
+administracao,administracao-10,"Indicadores de desempenho",,,,,,,aguardando_validacao
+administracao,administracao-11,"Gestão de projetos",,,,,,,aguardando_validacao
+administracao,administracao-12,"Metodologia em Administração",,,,,,,aguardando_validacao
+direito,direito-01,"Direito Constitucional",,,,,,,aguardando_validacao
+direito,direito-02,"Direito Civil",,,,,,,aguardando_validacao
+direito,direito-03,"Direito Penal",,,,,,,aguardando_validacao
+direito,direito-04,"Direito Administrativo",,,,,,,aguardando_validacao
+direito,direito-05,"Direito Trabalhista",,,,,,,aguardando_validacao
+direito,direito-06,"Direito Tributário",,,,,,,aguardando_validacao
+direito,direito-07,"Direito Empresarial",,,,,,,aguardando_validacao
+direito,direito-08,"Direito Eleitoral",,,,,,,aguardando_validacao
+direito,direito-09,"Direitos Humanos",,,,,,,aguardando_validacao
+direito,direito-10,"Direito Processual",,,,,,,aguardando_validacao
+direito,direito-11,"Pesquisa jurisprudencial",,,,,,,aguardando_validacao
+direito,direito-12,"Metodologia jurídica",,,,,,,aguardando_validacao
+enfermagem,enfermagem-01,"Saúde coletiva",,,,,,,aguardando_validacao
+enfermagem,enfermagem-02,"Enfermagem obstétrica",,,,,,,aguardando_validacao
+enfermagem,enfermagem-03,"Saúde da criança",,,,,,,aguardando_validacao
+enfermagem,enfermagem-04,"Saúde do adulto",,,,,,,aguardando_validacao
+enfermagem,enfermagem-05,"Enfermagem gerontológica",,,,,,,aguardando_validacao
+enfermagem,enfermagem-06,"Segurança do paciente",,,,,,,aguardando_validacao
+enfermagem,enfermagem-07,"Saúde mental",,,,,,,aguardando_validacao
+enfermagem,enfermagem-08,"Gestão de serviços de saúde",,,,,,,aguardando_validacao
+enfermagem,enfermagem-09,"Cuidados intensivos",,,,,,,aguardando_validacao
+enfermagem,enfermagem-10,"Enfermagem clínica",,,,,,,aguardando_validacao
+enfermagem,enfermagem-11,"Epidemiologia e revisão de evidências",,,,,,,aguardando_validacao
+enfermagem,enfermagem-12,"Metodologia em saúde",,,,,,,aguardando_validacao
+engenharia,engenharia-01,"Engenharia civil",,,,,,,aguardando_validacao
+engenharia,engenharia-02,"Engenharia elétrica",,,,,,,aguardando_validacao
+engenharia,engenharia-03,"Engenharia mecânica",,,,,,,aguardando_validacao
+engenharia,engenharia-04,"Engenharia de produção",,,,,,,aguardando_validacao
+engenharia,engenharia-05,"Engenharia ambiental",,,,,,,aguardando_validacao
+engenharia,engenharia-06,"Engenharia química",,,,,,,aguardando_validacao
+engenharia,engenharia-07,"Materiais e processos",,,,,,,aguardando_validacao
+engenharia,engenharia-08,"Automação e controle",,,,,,,aguardando_validacao
+engenharia,engenharia-09,"Qualidade e confiabilidade",,,,,,,aguardando_validacao
+engenharia,engenharia-10,"Gestão de projetos",,,,,,,aguardando_validacao
+engenharia,engenharia-11,"Modelagem de sistemas",,,,,,,aguardando_validacao
+engenharia,engenharia-12,"Metodologia de engenharia",,,,,,,aguardando_validacao
+pedagogia,pedagogia-01,"Educação infantil",,,,,,,aguardando_validacao
+pedagogia,pedagogia-02,"Alfabetização e letramento",,,,,,,aguardando_validacao
+pedagogia,pedagogia-03,"Didática e currículo",,,,,,,aguardando_validacao
+pedagogia,pedagogia-04,"Educação inclusiva",,,,,,,aguardando_validacao
+pedagogia,pedagogia-05,"Gestão escolar",,,,,,,aguardando_validacao
+pedagogia,pedagogia-06,"Tecnologias educacionais",,,,,,,aguardando_validacao
+pedagogia,pedagogia-07,"Avaliação da aprendizagem",,,,,,,aguardando_validacao
+pedagogia,pedagogia-08,"Formação docente",,,,,,,aguardando_validacao
+pedagogia,pedagogia-09,"Educação de jovens e adultos",,,,,,,aguardando_validacao
+pedagogia,pedagogia-10,"Psicopedagogia",,,,,,,aguardando_validacao
+pedagogia,pedagogia-11,"Políticas educacionais",,,,,,,aguardando_validacao
+pedagogia,pedagogia-12,"Metodologia em educação",,,,,,,aguardando_validacao
+psicologia,psicologia-01,"Psicologia social",,,,,,,aguardando_validacao
+psicologia,psicologia-02,"Desenvolvimento humano",,,,,,,aguardando_validacao
+psicologia,psicologia-03,"Psicologia da educação",,,,,,,aguardando_validacao
+psicologia,psicologia-04,"Psicologia organizacional",,,,,,,aguardando_validacao
+psicologia,psicologia-05,"Psicologia da saúde",,,,,,,aguardando_validacao
+psicologia,psicologia-06,"Cognição e aprendizagem",,,,,,,aguardando_validacao
+psicologia,psicologia-07,"Psicologia clínica (pesquisa)",,,,,,,aguardando_validacao
+psicologia,psicologia-08,"Psicometria",,,,,,,aguardando_validacao
+psicologia,psicologia-09,"Ética em pesquisa psicológica",,,,,,,aguardando_validacao
+psicologia,psicologia-10,"Psicologia comunitária",,,,,,,aguardando_validacao
+psicologia,psicologia-11,"Revisão de literatura",,,,,,,aguardando_validacao
+psicologia,psicologia-12,"Metodologia e análise qualitativa",,,,,,,aguardando_validacao
+servico-social,servico-social-01,"Políticas sociais",,,,,,,aguardando_validacao
+servico-social,servico-social-02,"Assistência social",,,,,,,aguardando_validacao
+servico-social,servico-social-03,"Direitos e cidadania",,,,,,,aguardando_validacao
+servico-social,servico-social-04,"Seguridade social",,,,,,,aguardando_validacao
+servico-social,servico-social-05,"Trabalho e desigualdades",,,,,,,aguardando_validacao
+servico-social,servico-social-06,"Questão urbana",,,,,,,aguardando_validacao
+servico-social,servico-social-07,"Infância e adolescência",,,,,,,aguardando_validacao
+servico-social,servico-social-08,"Envelhecimento e proteção social",,,,,,,aguardando_validacao
+servico-social,servico-social-09,"Famílias e redes de apoio",,,,,,,aguardando_validacao
+servico-social,servico-social-10,"Pesquisa social qualitativa",,,,,,,aguardando_validacao
+servico-social,servico-social-11,"Gestão de programas sociais",,,,,,,aguardando_validacao
+servico-social,servico-social-12,"Metodologia em Serviço Social",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-01,"Engenharia de software",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-02,"Arquitetura de sistemas",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-03,"Banco de dados",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-04,"Inteligência artificial (estudo crítico)",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-05,"Segurança da informação",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-06,"Ciência de dados",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-07,"Interação humano-computador",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-08,"Computação em nuvem",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-09,"Redes de computadores",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-10,"Desenvolvimento web",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-11,"Gestão e governança de TI",,,,,,,aguardando_validacao
+tecnologia-da-informacao,tecnologia-da-informacao-12,"Metodologia experimental em computação",,,,,,,aguardando_validacao
