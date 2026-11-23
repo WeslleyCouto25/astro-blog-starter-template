@@ -4,6 +4,7 @@ if(m&&nav){m.addEventListener("click",()=>{const on=m.getAttribute("aria-expande
 const f=document.querySelector("#lead-form");
 if(f){
  const notice=document.querySelector("#form-notice");
+ const submit=f.querySelector("#whatsapp-submit");if(submit)submit.disabled=false;
  f.addEventListener("submit",event=>{
   event.preventDefault();
   if(!f.reportValidity())return;

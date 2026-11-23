@@ -1,3 +1,9 @@
+# Comprar TCC Brasil — V3 em construção
+
+Esta branch mantém a V2 e acrescenta fluxo de orçamento com destino ao WhatsApp, locais físicos informados pelo responsável, 96 linhas de especialização de professores e textos de pesquisa para estados e capitais. **Nenhuma página está liberada para indexação.**
+
+Consulte [SEO-AUDITORIA-V3.md](SEO-AUDITORIA-V3.md) para requisitos de publicação. Telefone em JavaScript não é sigiloso no repositório público; não está incluído no HTML de contato nem no Schema.
+
 # Comprar TCC Brasil — V2 SEO e experiência
 
 V2 com novo posicionamento, melhorias na experiência mobile, marcação semântica, páginas de monografia e avaliações, professores próprios e arquitetura territorial.
