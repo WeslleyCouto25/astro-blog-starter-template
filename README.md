@@ -1,3 +1,9 @@
+# Comprar TCC Brasil — V2 SEO e experiência
+
+V2 com novo posicionamento, melhorias na experiência mobile, marcação semântica, páginas de monografia e avaliações, professores próprios e arquitetura territorial.
+
+**PRÉVIA NÃO INDEXÁVEL**: o formulário não envia dados; professores e depoimentos aguardam cadastro real; todas as páginas possuem noindex. Consulte SEO-AUDITORIA-V2.md antes do lançamento.
+
 # Comprar TCC Brasil — protótipo completo v1
 
 Site estático responsivo, em português, criado após estudo público de MyStudyBay e Comprar TCC e Monografia. Projeto completamente independente do EiPassei; nenhum post foi migrado.
