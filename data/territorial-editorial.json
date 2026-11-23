@@ -1,0 +1,276 @@
+{
+  "updated": "2026-11-23",
+  "purpose": "Sugestões editoriais territorialmente distintas; não constituem fatos ou pesquisas já executadas",
+  "regions": [
+    {
+      "stateSlug": "acre",
+      "citySlug": "rio-branco",
+      "state": "Acre",
+      "capital": "Rio Branco",
+      "question": "Comparar a evolução da permanência escolar entre municípios e áreas urbanas da capital",
+      "method": "Organizar séries do Censo Escolar do Inep e indicadores municipais do IBGE, separando rede de ensino, período e faixa etária",
+      "sources": "Indicadores educacionais disponíveis para o Acre; recorte explícito de municípios e anos",
+      "caution": "Evitar inferir causas a partir de correlações entre indicadores agregados"
+    },
+    {
+      "stateSlug": "alagoas",
+      "citySlug": "maceio",
+      "state": "Alagoas",
+      "capital": "Maceió",
+      "question": "Investigar relação entre saneamento básico e indicadores de saúde nos bairros ou municípios selecionados",
+      "method": "Articular indicadores do IBGE com bases públicas de saneamento e saúde; definir unidade territorial comparável",
+      "sources": "IBGE Cidades, Ministério das Cidades e bases do Ministério da Saúde",
+      "caution": "Revisar a compatibilidade dos períodos e não divulgar dados pessoais de saúde"
+    },
+    {
+      "stateSlug": "amapa",
+      "citySlug": "macapa",
+      "state": "Amapá",
+      "capital": "Macapá",
+      "question": "Analisar desafios de acesso a serviços digitais e infraestrutura educacional no entorno metropolitano",
+      "method": "Usar pesquisa documental e séries públicas sobre escolas e conectividade, explicitando limites de cobertura",
+      "sources": "Inep, IBGE e publicações institucionais amapaenses",
+      "caution": "Não tratar amostras da capital como representativas de todo o estado"
+    },
+    {
+      "stateSlug": "amazonas",
+      "citySlug": "manaus",
+      "state": "Amazonas",
+      "capital": "Manaus",
+      "question": "Investigar logística, mobilidade e acesso a serviços em municípios com diferentes características territoriais",
+      "method": "Comparar indicadores municipais em uma análise descritiva e contextualizar com literatura sobre transportes e Amazônia",
+      "sources": "IBGE Cidades, portais oficiais e repositórios da UFAM",
+      "caution": "Definir a unidade de análise antes de comparar trajetórias urbanas e ribeirinhas"
+    },
+    {
+      "stateSlug": "bahia",
+      "citySlug": "salvador",
+      "state": "Bahia",
+      "capital": "Salvador",
+      "question": "Estudar condições de acesso a equipamentos culturais e efeitos sobre projetos de educação",
+      "method": "Combinar análise documental com indicadores municipais de educação e cultura",
+      "sources": "IBGE, Inep e secretarias públicas com dados abertos",
+      "caution": "Distinguir associação estatística de relações causais sem desenho apropriado"
+    },
+    {
+      "stateSlug": "ceara",
+      "citySlug": "fortaleza",
+      "state": "Ceará",
+      "capital": "Fortaleza",
+      "question": "Avaliar diferenças na aprendizagem e na oferta educacional entre redes e etapas de ensino",
+      "method": "Definir série temporal do Censo Escolar e indicadores educacionais comparáveis, com revisão contextual",
+      "sources": "Inep, IBGE e publicações institucionais cearenses",
+      "caution": "Controlar mudanças de metodologia de medição ao longo do tempo"
+    },
+    {
+      "stateSlug": "distrito-federal",
+      "citySlug": "brasilia",
+      "state": "Distrito Federal",
+      "capital": "Brasília",
+      "question": "Relacionar políticas públicas e indicadores de acesso a serviços nas regiões administrativas",
+      "method": "Pesquisa documental sobre programas públicos combinada com indicadores territoriais",
+      "sources": "IBGE, órgãos do Governo do Distrito Federal e dados abertos nacionais",
+      "caution": "Não equiparar regiões administrativas a municípios brasileiros"
+    },
+    {
+      "stateSlug": "espirito-santo",
+      "citySlug": "vitoria",
+      "state": "Espírito Santo",
+      "capital": "Vitória",
+      "question": "Analisar logística urbana e integração entre municípios da região metropolitana",
+      "method": "Estudo de caso comparativo com documentos de mobilidade e indicadores públicos",
+      "sources": "IBGE, órgãos capixabas de planejamento e dados municipais",
+      "caution": "Explicitar fronteiras da região metropolitana e período das fontes"
+    },
+    {
+      "stateSlug": "goias",
+      "citySlug": "goiania",
+      "state": "Goiás",
+      "capital": "Goiânia",
+      "question": "Investigar indicadores de empreendedorismo e formalização em diferentes setores locais",
+      "method": "Desenho descritivo com dados públicos de empresas e revisão de estudos de gestão",
+      "sources": "IBGE, dados de registros empresariais e repositórios institucionais",
+      "caution": "Não confundir quantidade de empresas registradas com sobrevivência ou produtividade"
+    },
+    {
+      "stateSlug": "maranhao",
+      "citySlug": "sao-luis",
+      "state": "Maranhão",
+      "capital": "São Luís",
+      "question": "Avaliar acesso a políticas educacionais e permanência estudantil em territórios selecionados",
+      "method": "Revisão documental de políticas e séries de matrículas, com separação por modalidade",
+      "sources": "Inep, IBGE e relatórios públicos de educação",
+      "caution": "Evitar extrapolar resultados de uma instituição para toda a população"
+    },
+    {
+      "stateSlug": "mato-grosso",
+      "citySlug": "cuiaba",
+      "state": "Mato Grosso",
+      "capital": "Cuiabá",
+      "question": "Investigar relações entre cadeias produtivas e indicadores de formação profissional",
+      "method": "Análise setorial descritiva com estatísticas públicas e entrevistas somente com protocolo ético",
+      "sources": "IBGE, dados públicos de trabalho e documentos setoriais",
+      "caution": "Não usar dados de empresas individuais sem autorização"
+    },
+    {
+      "stateSlug": "mato-grosso-do-sul",
+      "citySlug": "campo-grande",
+      "state": "Mato Grosso do Sul",
+      "capital": "Campo Grande",
+      "question": "Examinar indicadores de gestão ambiental e políticas urbanas em recorte municipal",
+      "method": "Comparar documentos oficiais de planejamento com séries de saneamento e resíduos",
+      "sources": "IBGE, portais municipais e fontes oficiais de saneamento",
+      "caution": "Separar compromissos previstos em planos de ações efetivamente executadas"
+    },
+    {
+      "stateSlug": "minas-gerais",
+      "citySlug": "belo-horizonte",
+      "state": "Minas Gerais",
+      "capital": "Belo Horizonte",
+      "question": "Estudar mudanças no perfil de emprego em serviços e indústria nas regiões escolhidas",
+      "method": "Séries públicas com categorias ocupacionais consistentes e revisão bibliográfica",
+      "sources": "IBGE, Ministério do Trabalho e dados oficiais mineiros",
+      "caution": "Esclarecer os efeitos de mudança na classificação das atividades"
+    },
+    {
+      "stateSlug": "para",
+      "citySlug": "belem",
+      "state": "Pará",
+      "capital": "Belém",
+      "question": "Investigar desafios de planejamento urbano e sustentabilidade em áreas de expansão",
+      "method": "Análise de documentos territoriais e indicadores de infraestrutura com referências de geografia urbana",
+      "sources": "IBGE, portais municipais e repositórios da UFPA",
+      "caution": "Não deduzir condições de comunidades específicas por indicadores estaduais agregados"
+    },
+    {
+      "stateSlug": "paraiba",
+      "citySlug": "joao-pessoa",
+      "state": "Paraíba",
+      "capital": "João Pessoa",
+      "question": "Analisar políticas de turismo e alterações de indicadores de serviços locais",
+      "method": "Estudo documental e análise temporal de indicadores públicos antes de interpretar tendências",
+      "sources": "IBGE, fontes públicas de turismo e dados estaduais",
+      "caution": "Usar séries comparáveis e explicitar sazonalidade"
+    },
+    {
+      "stateSlug": "parana",
+      "citySlug": "curitiba",
+      "state": "Paraná",
+      "capital": "Curitiba",
+      "question": "Avaliar iniciativas de mobilidade urbana e acessibilidade em recortes municipais",
+      "method": "Comparar documentos de planejamento com indicadores territoriais e uma revisão crítica dos métodos",
+      "sources": "IBGE, IPARDES e documentos municipais de planejamento",
+      "caution": "Não afirmar efetividade de políticas apenas a partir de objetivos anunciados"
+    },
+    {
+      "stateSlug": "pernambuco",
+      "citySlug": "recife",
+      "state": "Pernambuco",
+      "capital": "Recife",
+      "question": "Investigar ecossistemas de tecnologia e formação profissional em diferentes territórios",
+      "method": "Pesquisa documental de programas de capacitação e indicadores de trabalho e educação",
+      "sources": "IBGE, Inep e documentos oficiais de inovação",
+      "caution": "Diferenciar vagas anunciadas, matrículas e resultados de empregabilidade"
+    },
+    {
+      "stateSlug": "piaui",
+      "citySlug": "teresina",
+      "state": "Piauí",
+      "capital": "Teresina",
+      "question": "Comparar indicadores de atenção primária e condições territoriais no estado",
+      "method": "Definir indicadores públicos por município e período com contextualização de políticas públicas",
+      "sources": "IBGE, Ministério da Saúde e dados abertos do estado",
+      "caution": "Usar fontes agregadas e respeitar limitações de atualização"
+    },
+    {
+      "stateSlug": "rio-de-janeiro",
+      "citySlug": "rio-de-janeiro",
+      "state": "Rio de Janeiro",
+      "capital": "Rio de Janeiro",
+      "question": "Investigar políticas de proteção de dados e uso de serviços digitais em instituições",
+      "method": "Estudo documental de políticas e protocolos, com análise normativa contextualizada",
+      "sources": "ANPD, textos legais e portais públicos das instituições",
+      "caution": "Não confundir conformidade documental declarada com prática efetivamente observada"
+    },
+    {
+      "stateSlug": "rio-grande-do-norte",
+      "citySlug": "natal",
+      "state": "Rio Grande do Norte",
+      "capital": "Natal",
+      "question": "Analisar a integração entre turismo e mobilidade em áreas urbanas selecionadas",
+      "method": "Análise de políticas públicas e indicadores comparáveis de infraestrutura e serviços",
+      "sources": "IBGE, dados municipais e publicações públicas de turismo",
+      "caution": "Não generalizar comportamentos individuais a partir de dados agregados"
+    },
+    {
+      "stateSlug": "rio-grande-do-sul",
+      "citySlug": "porto-alegre",
+      "state": "Rio Grande do Sul",
+      "capital": "Porto Alegre",
+      "question": "Examinar planejamento de resiliência e riscos urbanos em territórios selecionados",
+      "method": "Comparação documental de instrumentos de gestão, com séries de indicadores territoriais",
+      "sources": "IBGE, bases municipais de planejamento e documentos oficiais de defesa civil",
+      "caution": "Evitar tratar planos como evidência de implementação ou de impactos medidos"
+    },
+    {
+      "stateSlug": "rondonia",
+      "citySlug": "porto-velho",
+      "state": "Rondônia",
+      "capital": "Porto Velho",
+      "question": "Relacionar expansão urbana e acesso a equipamentos educacionais",
+      "method": "Análise de indicadores municipais de educação e documentos urbanísticos",
+      "sources": "IBGE, Inep e relatórios públicos municipais",
+      "caution": "Não atribuir efeitos à expansão sem desenho de pesquisa adequado"
+    },
+    {
+      "stateSlug": "roraima",
+      "citySlug": "boa-vista",
+      "state": "Roraima",
+      "capital": "Boa Vista",
+      "question": "Analisar desafios de atendimento em serviços públicos e indicadores demográficos",
+      "method": "Série descritiva com relatórios públicos, respeitando mudanças populacionais e métodos",
+      "sources": "IBGE e dados governamentais de serviços públicos",
+      "caution": "Evitar identificação indevida de grupos vulneráveis em amostras pequenas"
+    },
+    {
+      "stateSlug": "santa-catarina",
+      "citySlug": "florianopolis",
+      "state": "Santa Catarina",
+      "capital": "Florianópolis",
+      "question": "Investigar serviços digitais, empreendedorismo e capacitação em setores de tecnologia",
+      "method": "Estudo de caso com dados setoriais públicos e revisão crítica da literatura de inovação",
+      "sources": "IBGE, portais estaduais e repositórios universitários",
+      "caution": "Não confundir associação de empresas com representatividade do setor"
+    },
+    {
+      "stateSlug": "sao-paulo",
+      "citySlug": "sao-paulo",
+      "state": "São Paulo",
+      "capital": "São Paulo",
+      "question": "Analisar desigualdades no acesso a infraestrutura e serviços urbanos em diferentes distritos",
+      "method": "Comparação territorial descritiva com dados estatísticos e documentos municipais",
+      "sources": "IBGE, Fundação Seade e dados municipais abertos",
+      "caution": "Não usar médias estaduais para caracterizar todos os bairros da capital"
+    },
+    {
+      "stateSlug": "sergipe",
+      "citySlug": "aracaju",
+      "state": "Sergipe",
+      "capital": "Aracaju",
+      "question": "Investigar acesso a serviços de saúde e políticas de atenção básica",
+      "method": "Análise de indicadores públicos e de literatura de políticas de saúde com recorte temporal",
+      "sources": "IBGE, Ministério da Saúde e relatórios estaduais",
+      "caution": "Cuidar de lacunas e atraso de atualização nas séries de saúde"
+    },
+    {
+      "stateSlug": "tocantins",
+      "citySlug": "palmas",
+      "state": "Tocantins",
+      "capital": "Palmas",
+      "question": "Estudar expansão urbana e a relação entre infraestrutura e serviços educacionais",
+      "method": "Comparar indicadores e documentos de planejamento em territórios definidos",
+      "sources": "IBGE, Inep e documentos de gestão municipal",
+      "caution": "Distinguir crescimento populacional de expansão de oferta de serviços"
+    }
+  ]
+}
