@@ -1,7 +1,9 @@
-name: SEO static integrity
+name: SEO produção — integridade estática
 on:
   push:
-    branches: [comprartccbrasil-v2-seo]
+    branches: [comprartccbrasil-producao-rc1]
+  pull_request:
+    branches: [comprartccbrasil-producao-rc1]
   workflow_dispatch:
 jobs:
   audit:
@@ -9,7 +11,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Audit titles, canonicals, JSON-LD and links
-        run: python3 scripts/seo_audit.py
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validar SEO estático em todas as URLs
+        run: python scripts/seo_audit.py
