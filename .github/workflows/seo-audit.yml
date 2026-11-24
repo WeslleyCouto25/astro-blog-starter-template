@@ -1,9 +1,9 @@
 name: SEO produção — integridade estática
 on:
   push:
-    branches: [comprartccbrasil-producao-rc1]
+    branches: [comprartccbrasil-producao-rc1, comprartccbrasil-v4-design-editorial]
   pull_request:
-    branches: [comprartccbrasil-producao-rc1]
+    branches: [comprartccbrasil-producao-rc1, comprartccbrasil-v4-design-editorial]
   workflow_dispatch:
 jobs:
   audit:
@@ -17,3 +17,5 @@ jobs:
           python-version: "3.12"
       - name: Validar SEO estático em todas as URLs
         run: python scripts/seo_audit.py
+      - name: Verificar sintaxe JavaScript do formulário
+        run: node --check assets/site.js
