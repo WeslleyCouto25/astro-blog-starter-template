@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-# Todas as páginas permanecem com meta robots noindex durante a prévia.
-# Permitir crawl torna noindex legível; ativar indexação apenas depois da validação.
+
+Sitemap: https://comprartccbrasil.com.br/sitemap.xml

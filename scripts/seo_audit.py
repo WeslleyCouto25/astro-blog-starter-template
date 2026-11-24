@@ -1,80 +1,80 @@
 #!/usr/bin/env python3
-"""Static SEO auditor — runs without dependencies or external calls."""
-from __future__ import annotations
-from collections import Counter
-from html.parser import HTMLParser
+"""Auditoria SEO estática: títulos, metadados, indexação, links e Schema.org."""
 from pathlib import Path
-from urllib.parse import urlsplit, unquote
-import json, re, sys
-ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://comprartccbrasil.com.br"
-class Inspect(HTMLParser):
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
-        self.titles=[];self.h1=0;self.metas=[];self.links=[];self.scripts=[];self.canonical=[];self.open_script=False;self.buff=""
-        self.open_title=False;self.tbuf=""
-    def handle_starttag(self,tag,attrs):
-        a=dict(attrs)
-        if tag=="title":self.open_title=True;self.tbuf=""
-        if tag=="h1":self.h1+=1
-        if tag=="meta":self.metas.append(a)
-        if tag=="link" and a.get("rel")=="canonical":self.canonical.append(a.get("href",""))
-        if tag=="a":self.links.append(a.get("href",""))
-        if tag=="script" and a.get("type")=="application/ld+json":self.open_script=True;self.buff=""
-    def handle_data(self,data):
-        if self.open_script:self.buff+=data
-        if self.open_title:self.tbuf+=data
-    def handle_endtag(self,tag):
-        if tag=="script" and self.open_script:self.scripts.append(self.buff);self.open_script=False
-        if tag=="title" and self.open_title:self.titles.append(self.tbuf.strip());self.open_title=False
-def expected_url(path):
-    return BASE+("/" if path==ROOT/"index.html" else "/"+str(path.relative_to(ROOT).parent).replace("\\","/")+"/")
+from html.parser import HTMLParser
+from collections import Counter
+from urllib.parse import urlsplit,unquote
+import json,re,sys,xml.etree.ElementTree as ET
+ROOT=Path(__file__).resolve().parent.parent
+HOST="https://comprartccbrasil.com.br"
+EXCLUDE={"obrigado/index.html"}
+class Parser(HTMLParser):
+ def __init__(self):
+  super().__init__(convert_charrefs=True);self.title=[];self.title_open=False;self.buffer="";self.h1=0;self.links=[];self.canonical=[];self.description=[];self.robots=[];self.script_open=False;self.script_buffer="";self.jsonld=[]
+ def handle_starttag(self,tag,attrs):
+  a=dict(attrs)
+  if tag=="title":self.title_open=True;self.buffer=""
+  if tag=="h1":self.h1+=1
+  if tag=="a":self.links.append(a.get("href",""))
+  if tag=="link" and a.get("rel")=="canonical":self.canonical.append(a.get("href",""))
+  if tag=="meta":
+   if a.get("name")=="robots":self.robots.append(a.get("content",""))
+   if a.get("name")=="description":self.description.append(a.get("content",""))
+  if tag=="script" and a.get("type")=="application/ld+json":self.script_open=True;self.script_buffer=""
+ def handle_data(self,s):
+  if self.title_open:self.buffer+=s
+  if self.script_open:self.script_buffer+=s
+ def handle_endtag(self,tag):
+  if tag=="title" and self.title_open:self.title.append(self.buffer.strip());self.title_open=False
+  if tag=="script" and self.script_open:self.jsonld.append(self.script_buffer);self.script_open=False
 pages=sorted(ROOT.rglob("index.html"))
-errors=[];warn=[];infos=[];titles=[];page_urls=set()
-for path in pages:
-    raw=path.read_text(encoding="utf-8")
-    d=Inspect()
-    try:d.feed(raw)
-    except Exception as e:errors.append(f"{path.relative_to(ROOT)}: HTML parser error {e}");continue
-    name=str(path.relative_to(ROOT));canonical=expected_url(path);page_urls.add(canonical)
-    if len(d.titles)!=1:errors.append(f"{name}: expected one title; found {len(d.titles)}")
-    else:titles.append((d.titles[0],name))
-    if d.h1!=1:errors.append(f"{name}: expected one H1; found {d.h1}")
-    if len(d.canonical)!=1 or d.canonical[0]!=canonical:errors.append(f"{name}: missing/mismatched self-canonical: {d.canonical} != {canonical}")
-    descriptions=[m.get("content","") for m in d.metas if m.get("name")=="description"]
-    if len(descriptions)!=1 or not descriptions[0].strip():errors.append(f"{name}: missing/duplicate meta description")
-    if len(descriptions)==1 and len(descriptions[0])>180:warn.append(f"{name}: long meta description ({len(descriptions[0])})")
-    robots=[m.get("content","") for m in d.metas if m.get("name")=="robots"]
-    if len(robots)!=1 or "noindex" not in robots[0]:errors.append(f"{name}: staging noindex missing")
-    if not d.scripts:warn.append(f"{name}: no JSON-LD")
-    for block in d.scripts:
-        try:json.loads(block)
-        except Exception as e:errors.append(f"{name}: invalid JSON-LD: {e}")
-    for href in d.links:
-        if not href or href[0]=="#" or href.startswith(("mailto:","tel:","javascript:","data:")):continue
-        parts=urlsplit(href)
-        if parts.scheme or parts.netloc:continue
-        if href.startswith("/"): target=ROOT/href.lstrip("/")
-        else:target=path.parent/unquote(parts.path)
-        if target.is_dir():target=target/"index.html"
-        if not target.resolve().is_file():
-            errors.append(f"{name}: broken relative link: {href}")
-counts=Counter(t for t,_ in titles)
-for title,n in titles:
-    if counts[title]>1:errors.append(f"{n}: duplicate title {title}")
-    if len(title)>73:warn.append(f"{n}: title length {len(title)}")
-smap=(ROOT/"sitemap.xml").read_text(encoding="utf-8")
-for u in re.findall(r"<loc>([^<]+)</loc>",smap):
-    if u not in page_urls:errors.append(f"sitemap: URL missing from source files: {u}")
-statepages=list((ROOT/"estados").glob("*/index.html"))
-citypages=list((ROOT/"atendimento").glob("*/index.html"))
-area_pages=list((ROOT/"professores").glob("*/index.html"))
-if len(statepages)!=27:errors.append(f"Expected 27 state routes; found {len(statepages)}")
-if len(citypages)!=27:errors.append(f"Expected 27 capital routes; found {len(citypages)}")
-if len(area_pages)!=8:errors.append(f"Expected 8 specialist directories; found {len(area_pages)}")
-print("=== SEO STATIC AUDIT ===")
-print(json.dumps({"html_pages":len(pages),"states":len(statepages),"capitals":len(citypages),"specialist_directories":len(area_pages),"titles":len(titles),"warning_count":len(warn),"error_count":len(errors)},ensure_ascii=False,indent=2))
-for v in errors:print("ERROR:",v)
-for v in warn[:50]:print("WARN:",v)
-if len(warn)>50:print(f"... plus {len(warn)-50} other warnings")
+paths={str(x.relative_to(ROOT)).replace("\\","/") for x in pages}
+errors=[];warnings=[];urlmap={};titles=[]
+for p in pages:
+ rel=str(p.relative_to(ROOT)).replace("\\","/")
+ url=HOST+("/" if rel=="index.html" else "/"+rel[:-10])
+ urlmap[url]=rel
+ h=Parser();h.feed(p.read_text(encoding="utf-8"))
+ if len(h.title)!=1:errors.append(f"{rel}: deve ter 1 title")
+ else:
+  titles.append((h.title[0],rel))
+  if len(h.title[0])>72:warnings.append(f"{rel}: title >72 caracteres")
+ if h.h1!=1:errors.append(f"{rel}: {h.h1} tags H1")
+ if h.canonical!=[url]:errors.append(f"{rel}: canonical incorreto {h.canonical} esperado {url}")
+ if len(h.description)!=1 or not h.description[0]:errors.append(f"{rel}: description ausente/duplicada")
+ elif len(h.description[0])>185:warnings.append(f"{rel}: meta description extensa")
+ if len(h.robots)!=1:errors.append(f"{rel}: robots meta ausente/duplicado")
+ elif rel in EXCLUDE:
+  if "noindex" not in h.robots[0]:errors.append(f"{rel}: deve ser noindex")
+ elif "noindex" in h.robots[0] or "index" not in h.robots[0]:
+  errors.append(f"{rel}: indexação bloqueada {h.robots[0]}")
+ if not h.jsonld:errors.append(f"{rel}: JSON-LD ausente")
+ for raw in h.jsonld:
+  try:json.loads(raw)
+  except Exception as e:errors.append(f"{rel}: JSON-LD inválido {e}")
+ for href in h.links:
+  if not href or href.startswith(("#","mailto:","tel:","javascript:","data:")):continue
+  u=urlsplit(href)
+  if u.scheme or u.netloc:continue
+  target=(ROOT/unquote(u.path).lstrip("/")) if href.startswith("/") else (p.parent/unquote(u.path))
+  if target.is_dir():target=target/"index.html"
+  if not target.is_file():errors.append(f"{rel}: link interno quebrado {href}")
+counts=Counter(x for x,_ in titles)
+for title,rel in titles:
+ if counts[title]>1:errors.append(f"{rel}: title duplicado ({title})")
+expected={u for u,p in urlmap.items() if p not in EXCLUDE}
+try:
+ root=ET.fromstring((ROOT/"sitemap.xml").read_text(encoding="utf-8"))
+ listed=[x.text for x in root.iter() if x.tag.endswith("loc")]
+ if len(listed)!=len(set(listed)):errors.append("sitemap: URLs duplicadas")
+ if set(listed)!=expected:errors.append(f"sitemap: faltando {len(expected-set(listed))}, excessos {len(set(listed)-expected)}")
+except Exception as e:errors.append(f"sitemap inválido: {e}")
+rob=(ROOT/"robots.txt").read_text()
+if "Disallow: /" in rob:errors.append("robots.txt bloqueia o domínio")
+if "Sitemap: "+HOST+"/sitemap.xml" not in rob:errors.append("robots.txt sem sitemap")
+if len(list((ROOT/"estados").glob("*/index.html")))!=27:errors.append("estados incompletos")
+if len(list((ROOT/"atendimento").glob("*/index.html")))!=27:errors.append("capitais incompletas")
+if len(list((ROOT/"professores").glob("*/index.html")))!=8:errors.append("áreas dos professores incompletas")
+report={"html_pages":len(pages),"eligible_for_indexing":len(expected),"noindex_utility":len(EXCLUDE),"schemas_validated_syntactically":len(pages),"errors":errors,"warnings":warnings}
+print(json.dumps(report,ensure_ascii=False,indent=2))
 sys.exit(1 if errors else 0)

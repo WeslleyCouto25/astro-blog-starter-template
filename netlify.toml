@@ -1,0 +1,16 @@
+# Optional static hosting config (Netlify). A custom domain must be connected in hosting settings.
+[build]
+  publish = "."
+[build.processing]
+  skip_processing = true
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+[[redirects]]
+  from = "https://www.comprartccbrasil.com.br/*"
+  to = "https://comprartccbrasil.com.br/:splat"
+  status = 301
+  force = true
